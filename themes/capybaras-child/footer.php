@@ -16,7 +16,7 @@
 		</div><!-- #primary -->
 	</div><!-- #content -->
 <?php
-if ( is_front_page() || is_home() || is_page( 'about' ) ) {
+if ( is_front_page() || is_page( 'about' ) ) {
  
  $args = array(
      'post_type'      => 'post',
@@ -26,8 +26,6 @@ if ( is_front_page() || is_home() || is_page( 'about' ) ) {
  );
 
  $posts_query = new WP_Query( $args );
-
- if ( $posts_query->have_posts() ) :
      while ( $posts_query->have_posts() ) : $posts_query->the_post();
          ?>
          <article class="thePosts">
@@ -39,7 +37,6 @@ if ( is_front_page() || is_home() || is_page( 'about' ) ) {
          <?php
      endwhile;
      wp_reset_postdata();
- endif;
 }
 ?>
 

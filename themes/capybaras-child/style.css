@@ -14,3 +14,27 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: capybaras-child
 Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
 */
+
+.thePosts {
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 30px;
+}
+
+.post-thumbnail img {
+    height: 500px;
+    width: 20px;
+}
+
+.post-title {
+    text-align: center;
+}
+
+.post-excerpt {
+    font-size: 20px
+}
+
+.post-view {
+    font-size: 25px;
+}
+
