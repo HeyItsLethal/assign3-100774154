@@ -24,3 +24,5 @@ function capybaras_child_scripts() {
 	
 }
 add_action( 'wp_enqueue_scripts', 'capybaras_child_scripts' );
+
+add_image_size( 'img-posts', 300, 200, true );

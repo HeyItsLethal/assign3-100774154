@@ -16,7 +16,7 @@
 		</div><!-- #primary -->
 	</div><!-- #content -->
 <?php
-    if ( is_home() || is_page( 'about' ) ) {
+if ( is_front_page() || is_home() || is_page( 'about' ) ) {
  
  $args = array(
      'post_type'      => 'post',
@@ -30,21 +30,15 @@
  if ( $posts_query->have_posts() ) :
      while ( $posts_query->have_posts() ) : $posts_query->the_post();
          ?>
-         <article style="margin-left: 40px; margin-right: 40px;"class="thePosts"<?php post_class(); ?>>
-             <h2><?php the_title(); ?></h2>
-             <?php
-             if ( has_post_thumbnail() ) {
-                 the_post_thumbnail( '100px' ); 
-             }
-             ?>
-             <div class="excerpt"><?php the_excerpt(); ?></div>
-             <p><a href="<?php the_permalink(); ?>">Read more</a></p>
+         <article class="thePosts">
+             <h2 class="post-title"><?php the_title(); ?></h2>
+             <div class="post-thumbnail"><?php the_post_thumbnail( );?></div>
+             <div class="post-excerpt"><?php the_excerpt(); ?></div>
+             <p class="post-view"><a href="<?php the_permalink(); ?>">View Here</a></p>
          </article>
          <?php
      endwhile;
      wp_reset_postdata();
- else :
-     echo 'There are no posts';
  endif;
 }
 ?>
