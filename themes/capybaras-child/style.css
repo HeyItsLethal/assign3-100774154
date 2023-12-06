@@ -38,3 +38,22 @@ Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, 
     font-size: 25px;
 }
 
+.site-title {
+    text-align: left;
+}
+
+summary {
+    font-size: 30px;
+}
+
+.wp-block-heading {
+    text-align: center;
+}
+
+.aboutText {
+    text-align: left;
+}
+
+a:hover {
+    color: rgb(209, 165, 221);
+}
